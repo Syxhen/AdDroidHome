@@ -381,13 +381,13 @@ private fun ConnectedHomePreviewHost(
     }
 }
 
-@Preview(name = "Connected Home Dark", showBackground = true, widthDp = 412, heightDp = 915)
+@Preview(name = "Connected Home Dark", showBackground = true, widthDp = 412, heightDp = 824)
 @Composable
 private fun ConnectedHomeDarkPreview() {
     ConnectedHomePreviewHost(selectedTab = MainTab.Dashboard)
 }
 
-@Preview(name = "Connected Query Log Dark", showBackground = true, widthDp = 412, heightDp = 915)
+@Preview(name = "Connected Query Log Dark", showBackground = true, widthDp = 412, heightDp = 824)
 @Composable
 private fun ConnectedHomeQueryLogDarkPreview() {
     val extendedItems = sampleQueryLogItems() + listOf(
@@ -432,7 +432,7 @@ private fun ConnectedHomeQueryLogDarkPreview() {
     )
 }
 
-@Preview(name = "Connected Settings Dark", showBackground = true, widthDp = 412, heightDp = 915)
+@Preview(name = "Connected Settings Dark", showBackground = true, widthDp = 412, heightDp = 824)
 @Composable
 private fun ConnectedHomeSettingsDarkPreview() {
     ConnectedHomePreviewHost(

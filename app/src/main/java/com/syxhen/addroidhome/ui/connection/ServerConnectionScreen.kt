@@ -279,7 +279,7 @@ private fun ServerConnectionScreenPreview() {
     }
 }
 
-@Preview(name = "Connection Dark", showBackground = true, widthDp = 412, heightDp = 915)
+@Preview(name = "Connection Dark", showBackground = true, widthDp = 412, heightDp = 824)
 @Composable
 private fun ServerConnectionDarkPreview() {
     AdDroidHomeTheme(darkTheme = true, dynamicColor = false) {
