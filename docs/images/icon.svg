@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="18 18 72 72">
+  <defs>
+    <clipPath id="squircle">
+      <rect x="18" y="18" width="72" height="72" rx="18"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#squircle)">
+    <!-- Flat Material 3 tonal container background -->
+    <rect x="18" y="18" width="72" height="72" fill="#C8E6C9"/>
+
+    <!-- Compact, centered house roof -->
+    <path d="M33.5,48 L54,33.5 L74.5,48"
+          fill="none" stroke="#1B5E20" stroke-width="4.2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Android antennae tucked beneath the roof -->
+    <path d="M46.8,51.2 L44.2,46.5"
+          fill="none" stroke="#1B5E20" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M61.2,51.2 L63.8,46.5"
+          fill="none" stroke="#1B5E20" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- Android head dome with softly rounded lower corners -->
+    <path d="M38,65.5 A16,16 0 0,1 70,65.5 L70,67.3 Q70,70.5 66.8,70.5 L41.2,70.5 Q38,70.5 38,67.3 Z"
+          fill="#1B5E20"/>
+
+    <!-- Android eyes (background tone cutout) -->
+    <circle cx="47.5" cy="59.5" r="2" fill="#C8E6C9"/>
+    <circle cx="60.5" cy="59.5" r="2" fill="#C8E6C9"/>
+
+    <!-- Clean flat cutout halo separating the shield from the droid border -->
+    <path d="M70.5,60.8 L78.7,63.8 L78.7,69.9 C78.7,74.4 75.3,77.7 70.5,79.2 C65.7,77.7 62.3,74.4 62.3,69.9 L62.3,63.8 Z"
+          fill="#C8E6C9"/>
+
+    <!-- Tiny shield badge on the bottom-right border of the droid -->
+    <path d="M70.5,62.8 L76.7,65.1 L76.7,69.6 C76.7,73.1 74.1,75.7 70.5,76.8 C66.9,75.7 64.3,73.1 64.3,69.6 L64.3,65.1 Z"
+          fill="#1B5E20"/>
+
+    <!-- Crisp checkmark inside the shield -->
+    <path d="M67.8,69.8 L69.7,71.7 L73.5,67.8"
+          fill="none" stroke="#C8E6C9" stroke-width="1.9"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Compact, centered house roof -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M33.5,48 L54,33.5 L74.5,48"
+        android:strokeColor="#1B5E20"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="4.2" />
+
+    <!-- Android antennae tucked beneath the roof -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M46.8,51.2 L44.2,46.5"
+        android:strokeColor="#1B5E20"
+        android:strokeLineCap="round"
+        android:strokeWidth="2.4" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M61.2,51.2 L63.8,46.5"
+        android:strokeColor="#1B5E20"
+        android:strokeLineCap="round"
+        android:strokeWidth="2.4" />
+
+    <!-- Android head dome with softly rounded lower corners -->
+    <path
+        android:fillColor="#1B5E20"
+        android:pathData="M38,65.5 A16,16 0 0,1 70,65.5 L70,67.3 Q70,70.5 66.8,70.5 L41.2,70.5 Q38,70.5 38,67.3 Z" />
+
+    <!-- Android eyes (background tone cutout) -->
+    <path
+        android:fillColor="#C8E6C9"
+        android:pathData="M47.5,59.5m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0" />
+    <path
+        android:fillColor="#C8E6C9"
+        android:pathData="M60.5,59.5m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0" />
+
+    <!-- Clean flat cutout halo separating the shield from the droid border -->
+    <path
+        android:fillColor="#C8E6C9"
+        android:pathData="M70.5,60.8 L78.7,63.8 L78.7,69.9 C78.7,74.4 75.3,77.7 70.5,79.2 C65.7,77.7 62.3,74.4 62.3,69.9 L62.3,63.8 Z" />
+
+    <!-- Tiny shield badge on the bottom-right border of the droid -->
+    <path
+        android:fillColor="#1B5E20"
+        android:pathData="M70.5,62.8 L76.7,65.1 L76.7,69.6 C76.7,73.1 74.1,75.7 70.5,76.8 C66.9,75.7 64.3,73.1 64.3,69.6 L64.3,65.1 Z" />
+
+    <!-- Crisp checkmark inside the shield -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M67.8,69.8 L69.7,71.7 L73.5,67.8"
+        android:strokeColor="#C8E6C9"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="1.9" />
+</vector>

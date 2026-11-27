@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+        Android's domain-config does not support CIDR ranges (e.g. 192.168.0.0/16), so cleartext
+        is enabled here and strictly restricted to private/LAN hosts at the OkHttp layer via
+        LocalNetworkPolicy. User-installed root CAs are also trusted for homelab PKIs.
+    -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
