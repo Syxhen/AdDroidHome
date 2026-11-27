@@ -11,6 +11,8 @@
 
 <p align="center">
   <a href="https://github.com/Syxhen/AdDroidHome/releases/latest"><img alt="Download the latest release" src="docs/images/download-badge.svg"></a>
+  &nbsp;
+  <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.syxhen.addroidhome%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2FSyxhen%2FAdDroidHome%22%2C%22author%22%3A%22Syxhen%22%2C%22name%22%3A%22AdDroid%20Home%22%2C%22additionalSettings%22%3A%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eaddroidhome%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D"><img alt="Add to Obtainium" src="docs/images/obtainium-badge.svg"></a>
 </p>
 
 <p align="center">
@@ -110,6 +112,14 @@ two APKs and a `SHA256SUMS.txt` checksum file:
   optimized with R8).
 - **`addroidhome-debug.apk`** — side-by-side debug build
   (`AdDroid Home (Debug)`) for testing alongside the release build.
+
+### Via Obtainium (automatic updates)
+
+If you use [Obtainium](https://github.com/ImranR98/Obtainium), tap
+**[Add to Obtainium](https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.syxhen.addroidhome%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2FSyxhen%2FAdDroidHome%22%2C%22author%22%3A%22Syxhen%22%2C%22name%22%3A%22AdDroid%20Home%22%2C%22additionalSettings%22%3A%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Eaddroidhome%5C%5C%5C%5C.apk%24%5C%22%7D%22%7D)**
+to import **AdDroid Home** directly from GitHub Releases with the
+`^addroidhome\.apk$` filter pre-configured so updates automatically install the
+release APK and skip `addroidhome-debug.apk`.
 
 ### Via ADB
 
