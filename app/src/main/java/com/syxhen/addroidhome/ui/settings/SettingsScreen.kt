@@ -701,7 +701,7 @@ private fun RewriteEditorDialog(
     )
 }
 
-private fun sampleSettingsState(): SettingsUiState = SettingsUiState(
+internal fun sampleSettingsState(): SettingsUiState = SettingsUiState(
     safeBrowsingEnabled = true,
     parentalEnabled = false,
     safeSearch = SafeSearchConfigDto(

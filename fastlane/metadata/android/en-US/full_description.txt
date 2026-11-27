@@ -1,0 +1,23 @@
+AdDroid Home is an unofficial, native Jetpack Compose and Material 3 Android client for managing your self-hosted AdGuard Home server directly from your phone.
+
+Features:
+- Interactive Dashboard & Charts: Toggle DNS protection or pause it for 5 min, 15 min, or 1 hour with a live countdown. Switch stats windows (Default, 1h, 6h, 12h, 24h, 7d), scrub the touch-interactive Query Activity chart, inspect Upstream DNS shares and latencies, and tap metric cards or Top Activity rows to drill directly into the filtered Query Log.
+- Query Log: Search by domain or client, filter by status (compatible with both modern and legacy AdGuard Home schemas), paginate through history, inspect full DNS answers and matching rules, and block or unblock domains with one tap.
+- Filters & Custom Rules: Toggle global DNS filtering, add/remove/toggle blocklists and allowlists, trigger upstream list refreshes, and edit custom filtering rules in a monospace editor.
+- Blocked Services: Search popular services by name or category, filter active blocks, stage multiple toggles, and apply updates while preserving server schedules.
+- Settings & DNS Rewrites: Control Safe Browsing, Parental Control, and per-engine Safe Search (Google, Bing, YouTube, DuckDuckGo, Ecosia, Pixabay, Yandex). Add, edit, toggle, and delete DNS Rewrites, or clear query logs and reset statistics with confirmation dialogs.
+
+Security & Privacy:
+- Credentials are encrypted on-device with AES-256-GCM using Android Keystore.
+- Plain HTTP is strictly limited to private LAN addresses; public hosts require HTTPS.
+- Opt-in trust for self-signed homelab TLS certificates and user-installed root CAs.
+- Zero telemetry, zero analytics, and zero third-party relays.
+
+Permissions:
+- INTERNET: Connects directly to your AdGuard Home server API.
+- ACCESS_NETWORK_STATE: Detects offline/network states cleanly.
+- ACCESS_LOCAL_NETWORK (Android 17+): Required at runtime on Android 17+ to reach local LAN AdGuard Home servers.
+
+Requirements: Android 12+ and a reachable AdGuard Home server (v0.107.x or newer). No root required.
+
+Disclaimer: AdDroid Home is an independent, unofficial client and is not affiliated with, endorsed by, or sponsored by AdGuard Software Limited.

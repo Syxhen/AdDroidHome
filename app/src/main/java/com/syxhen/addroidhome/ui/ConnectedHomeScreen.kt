@@ -20,9 +20,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import com.syxhen.addroidhome.data.network.model.DnsAnswerDto
+import com.syxhen.addroidhome.data.network.model.DnsQuestionDto
 import com.syxhen.addroidhome.data.network.model.FilterListDto
+import com.syxhen.addroidhome.data.network.model.QueryLogClientInfoDto
 import com.syxhen.addroidhome.data.network.model.QueryLogFilter
 import com.syxhen.addroidhome.data.network.model.QueryLogItemDto
+import com.syxhen.addroidhome.data.network.model.ResultRuleDto
 import com.syxhen.addroidhome.data.network.model.RewriteEntryDto
 import com.syxhen.addroidhome.data.network.model.SafeSearchEngine
 import com.syxhen.addroidhome.ui.dashboard.DashboardContent
@@ -36,8 +40,10 @@ import com.syxhen.addroidhome.ui.icons.receipt_long
 import com.syxhen.addroidhome.ui.icons.refresh
 import com.syxhen.addroidhome.ui.icons.settings
 import com.syxhen.addroidhome.ui.querylog.QueryLogContent
+import com.syxhen.addroidhome.ui.querylog.sampleQueryLogItems
 import com.syxhen.addroidhome.ui.services.BlockedServicesContent
 import com.syxhen.addroidhome.ui.settings.SettingsContent
+import com.syxhen.addroidhome.ui.settings.sampleSettingsState
 import com.syxhen.addroidhome.ui.theme.AdDroidHomeTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -306,22 +312,25 @@ fun ConnectedHomeScreen(
     }
 }
 
-@Preview(name = "Connected Home Dark", showBackground = true, widthDp = 412, heightDp = 915)
 @Composable
-private fun ConnectedHomeDarkPreview() {
+private fun ConnectedHomePreviewHost(
+    selectedTab: MainTab,
+    queryLogState: QueryLogUiState = QueryLogUiState(),
+    settingsState: SettingsUiState = SettingsUiState(),
+) {
     AdDroidHomeTheme(darkTheme = true, dynamicColor = false) {
         ConnectedHomeScreen(
-            selectedTab = MainTab.Dashboard,
+            selectedTab = selectedTab,
             dashboardState = DashboardUiState(
                 serverHost = "192.168.1.2:3000",
                 snapshot = sampleDashboardSnapshot(protectionEnabled = true),
                 selectedTimeRange = StatsTimeRange.Last24Hours,
                 defaultWindowMillis = 24L * 3_600_000L,
             ),
-            queryLogState = QueryLogUiState(),
+            queryLogState = queryLogState,
             filtersState = FiltersUiState(),
             blockedServicesState = BlockedServicesUiState(),
-            settingsState = SettingsUiState(),
+            settingsState = settingsState,
             onSelectTab = {},
             onRefreshDashboard = {},
             onSelectStatsTimeRange = {},
@@ -370,4 +379,64 @@ private fun ConnectedHomeDarkPreview() {
             onDismissSettingsFeedback = {},
         )
     }
+}
+
+@Preview(name = "Connected Home Dark", showBackground = true, widthDp = 412, heightDp = 915)
+@Composable
+private fun ConnectedHomeDarkPreview() {
+    ConnectedHomePreviewHost(selectedTab = MainTab.Dashboard)
+}
+
+@Preview(name = "Connected Query Log Dark", showBackground = true, widthDp = 412, heightDp = 915)
+@Composable
+private fun ConnectedHomeQueryLogDarkPreview() {
+    val extendedItems = sampleQueryLogItems() + listOf(
+        QueryLogItemDto(
+            time = "2026-11-26T01:13:41+01:00",
+            question = DnsQuestionDto(name = "nas.home.lan", type = "A", dnsClass = "IN"),
+            answer = listOf(DnsAnswerDto(type = "A", value = "192.168.1.50", ttl = 10)),
+            client = "192.168.1.22",
+            clientInfo = QueryLogClientInfoDto(name = "Workstation"),
+            elapsedMs = "0.18",
+            reason = "Rewrite",
+            status = "NOERROR",
+        ),
+        QueryLogItemDto(
+            time = "2026-11-26T01:13:18+01:00",
+            question = DnsQuestionDto(name = "telemetry.example.com", type = "A", dnsClass = "IN"),
+            client = "192.168.1.40",
+            clientInfo = QueryLogClientInfoDto(name = "Living Room TV"),
+            elapsedMs = "0.35",
+            reason = "FilteredBlackList",
+            rules = listOf(ResultRuleDto(filterListId = 1L, text = "||telemetry.example.com^")),
+            status = "NOERROR",
+        ),
+        QueryLogItemDto(
+            time = "2026-11-26T01:12:54+01:00",
+            question = DnsQuestionDto(name = "android.com", type = "HTTPS", dnsClass = "IN"),
+            cached = true,
+            upstream = "https://dns.cloudflare.com/dns-query",
+            client = "192.168.1.15",
+            clientInfo = QueryLogClientInfoDto(name = "Pixel 9"),
+            elapsedMs = "0.94",
+            reason = "NotFilteredNotFound",
+            status = "NOERROR",
+        ),
+    )
+    ConnectedHomePreviewHost(
+        selectedTab = MainTab.QueryLog,
+        queryLogState = QueryLogUiState(
+            items = extendedItems,
+            hasLoadedOnce = true,
+        ),
+    )
+}
+
+@Preview(name = "Connected Settings Dark", showBackground = true, widthDp = 412, heightDp = 915)
+@Composable
+private fun ConnectedHomeSettingsDarkPreview() {
+    ConnectedHomePreviewHost(
+        selectedTab = MainTab.Settings,
+        settingsState = sampleSettingsState(),
+    )
 }

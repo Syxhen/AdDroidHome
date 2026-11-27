@@ -1,0 +1,5 @@
+Initial public release (v1.0.0):
+- HTTPS or private-LAN HTTP with Android Keystore encryption, opt-in self-signed TLS, and Android 17 Local Network support.
+- Interactive Dashboard: quick pause timers, stats time-range selector, scrubbable Query Activity & Upstreams charts, and clickable drill-downs.
+- Query Log search, filters, detail sheet, and 1-tap Block/Unblock.
+- Filters, custom rules, Blocked Services, Safe Browsing/Parental/Safe Search, and DNS Rewrites.

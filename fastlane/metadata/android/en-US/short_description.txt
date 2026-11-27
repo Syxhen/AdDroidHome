@@ -1,0 +1,1 @@
+Unofficial Material 3 Android client for self-hosted AdGuard Home servers.

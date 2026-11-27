@@ -585,7 +585,7 @@ private fun formatFullTime(isoTimestamp: String): String = runCatching {
         .format(FullDateTimeFormatter)
 }.getOrDefault(isoTimestamp)
 
-private fun sampleQueryLogItems(): List<QueryLogItemDto> = listOf(
+internal fun sampleQueryLogItems(): List<QueryLogItemDto> = listOf(
     QueryLogItemDto(
         time = "2026-11-26T01:14:22+01:00",
         question = DnsQuestionDto(name = "ads.tracker.net", type = "A", dnsClass = "IN"),

@@ -140,3 +140,29 @@ private fun AppIconShowcaseDarkPreview() {
         }
     }
 }
+
+@Preview(name = "Store Icon Asset", showBackground = false, widthDp = 256, heightDp = 256)
+@Composable
+private fun AppIconStoreAssetPreview() {
+    Box(
+        modifier = Modifier
+            .size(256.dp)
+            .clip(RoundedCornerShape(64.dp)),
+        contentAlignment = Alignment.Center,
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.ic_launcher_background),
+            contentDescription = null,
+            modifier = Modifier
+                .fillMaxSize()
+                .scale(ADAPTIVE_VIEWPORT_SCALE),
+        )
+        Image(
+            painter = painterResource(id = R.drawable.ic_launcher_foreground),
+            contentDescription = null,
+            modifier = Modifier
+                .fillMaxSize()
+                .scale(ADAPTIVE_VIEWPORT_SCALE),
+        )
+    }
+}

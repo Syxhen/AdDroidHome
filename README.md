@@ -5,7 +5,7 @@
 <h1 align="center">AdDroid Home</h1>
 
 <p align="center">
-  Native Material 3 Android client for self-hosted AdGuard Home servers:<br>
+  <strong>Unofficial</strong> Material 3 Android client for self-hosted AdGuard Home servers:<br>
   monitor live DNS analytics, inspect and filter the query log, and manage protection rules directly from your phone.
 </p>
 
@@ -26,9 +26,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/images/login.png" width="280" alt="AdDroid Home dark mode login screen configured with a default local AdGuard Home server">
-  &nbsp;&nbsp;&nbsp;
-  <img src="docs/images/dashboard.png" width="280" alt="AdDroid Home dark mode dashboard showing active DNS protection, stats window selector, clickable metrics, and interactive query activity chart">
+  <img src="fastlane/metadata/android/en-US/images/featureGraphic.png" width="760" alt="AdDroid Home banner showcasing the dark mode Dashboard and Query Log">
 </p>
 
 ## Overview
@@ -181,4 +179,16 @@ Per Sections 4 and 6 of the Apache License 2.0, forks and redistributions must
 retain attribution to **AdDroid Home** (`Syxhen/AdDroidHome`) via the `NOTICE`
 file and may not use the **AdDroid Home** name or app icon to republish
 derivative apps without prior written permission.
+
+## Disclaimer
+
+**AdDroid Home** is an independent, unofficial client and is not affiliated
+with, endorsed by, or sponsored by AdGuard Software Limited. "AdGuard" and
+"AdGuard Home" are trademarks of their respective owners.
+
+## Development Notes
+
+**AdDroid Home** is coded and tested in Android Studio across multiple devices
+(starting from Android 17). An AI agent was used to assist with debugging and
+select tweaks during development.
 
