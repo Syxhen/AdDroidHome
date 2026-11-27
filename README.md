@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Syxhen/AdDroidHome/releases/latest"><img alt="Download the latest release" src="https://img.shields.io/github/v/release/Syxhen/AdDroidHome?style=for-the-badge&amp;label=download&amp;labelColor=0d1117&amp;color=4caf50"></a>
+  <a href="https://github.com/Syxhen/AdDroidHome/releases/latest"><img alt="Download the latest release" src="https://img.shields.io/github/v/release/Syxhen/AdDroidHome?style=for-the-badge&amp;sort=semver&amp;label=download&amp;labelColor=0d1117&amp;color=4caf50"></a>
 </p>
 
 <p align="center">
@@ -20,9 +20,9 @@
 <p align="center">
   <a href="#requirements"><img alt="Android 12+" src="https://img.shields.io/badge/Android-12%2B-3ddc84?logo=android&amp;logoColor=white"></a>
   <a href="#requirements"><img alt="Kotlin &amp; Jetpack Compose" src="https://img.shields.io/badge/Kotlin-Compose%20M3-7f52ff?logo=kotlin&amp;logoColor=white"></a>
-  <a href="https://github.com/Syxhen/AdDroidHome/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/Syxhen/AdDroidHome/ci.yml?branch=main&amp;label=ci"></a>
-  <a href="https://github.com/Syxhen/AdDroidHome/releases"><img alt="Latest release, including betas" src="https://img.shields.io/github/v/release/Syxhen/AdDroidHome?include_prereleases&amp;label=newest&amp;color=e3793b"></a>
-  <a href="LICENSE"><img alt="License" src="https://img.shields.io/github/license/Syxhen/AdDroidHome"></a>
+  <a href="https://github.com/Syxhen/AdDroidHome/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/Syxhen/AdDroidHome/ci.yml?branch=main&amp;label=ci&amp;logo=githubactions&amp;logoColor=white"></a>
+  <a href="https://github.com/Syxhen/AdDroidHome/releases"><img alt="Latest release, including betas" src="https://img.shields.io/github/v/release/Syxhen/AdDroidHome?include_prereleases&amp;sort=semver&amp;label=newest&amp;color=e3793b"></a>
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/github/license/Syxhen/AdDroidHome?color=2e7d32"></a>
 </p>
 
 <p align="center">
