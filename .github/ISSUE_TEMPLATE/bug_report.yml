@@ -1,0 +1,71 @@
+name: Bug report
+description: Report a crash, API compatibility issue, or unexpected behavior in AdDroid Home
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting an issue! Please fill in the details below so we can
+        reproduce it quickly. Do not paste passwords, cookies, or personal server
+        credentials.
+  - type: input
+    id: app-version
+    attributes:
+      label: AdDroid Home version and build type
+      placeholder: v1.0.0 (release) or v1.0.0-debug
+    validations:
+      required: true
+  - type: input
+    id: android-version
+    attributes:
+      label: Android version
+      placeholder: Android 17 (API 37)
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device model
+      placeholder: Pixel 9
+    validations:
+      required: true
+  - type: input
+    id: agh-version
+    attributes:
+      label: AdGuard Home server version
+      placeholder: v0.107.72
+    validations:
+      required: true
+  - type: dropdown
+    id: connection
+    attributes:
+      label: Connection type
+      options:
+        - Local LAN (HTTP)
+        - Local LAN (HTTPS with self-signed cert)
+        - HTTPS (reverse proxy / trusted CA)
+        - VPN (WireGuard / Tailscale / etc.)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open AdDroid Home and go to '...'
+        2. Tap '...'
+        3. Observe '...'
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error message, screenshot, or sanitized logcat output
+      description: Redact any credentials, tokens, or private hostnames before posting.
+      render: text
