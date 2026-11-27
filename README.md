@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Syxhen/AdDroidHome/releases/latest"><img alt="Download the latest release" src="https://img.shields.io/badge/download-latest%20apk-4caf50?style=for-the-badge&amp;labelColor=0d1117"></a>
+  <a href="https://github.com/Syxhen/AdDroidHome/releases/latest"><img alt="Download the latest release" src="docs/images/download-badge.svg"></a>
 </p>
 
 <p align="center">
